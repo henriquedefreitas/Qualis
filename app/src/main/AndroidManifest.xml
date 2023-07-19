@@ -7,33 +7,12 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/qualis_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/qualis_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Qualis"
         tools:targetApi="31">
-        <activity
-            android:name=".correlacao.CorrelacaoSection"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".periodicos.PeriodicoSection"
-            android:exported="true">
-            <meta-data
-                android:name=".PeriodicoSection"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".conferencia.ConferenciaSection"
-            android:exported="true">
-            <meta-data
-                android:name=".ConferenciaSection"
-                android:value="" />
-        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">
