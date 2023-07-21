@@ -20,7 +20,7 @@ public class CorrelacaoListAdapter extends RecyclerView.Adapter<CorrelacaoListAd
 
     @Override
     public CorrelacaoListAdapter.CorrelacaoViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View itemView = mInflater.inflate(R.layout.recyclerview_item_correlacao, parent, false);
+        View itemView = mInflater.inflate(R.layout.recyclerview_correlacao_item, parent, false);
         return new CorrelacaoListAdapter.CorrelacaoViewHolder(itemView);
     }
 
