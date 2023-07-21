@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".periodicos.PeriodicoSection">
+    android:layout_height="match_parent">
 
     <include
         android:id="@+id/include2"
@@ -12,34 +11,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/periodico_column_content"
-        android:layout_width="75dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="130dp"
-        android:fontFamily="@font/inter"
-        android:text="@string/periodico_column"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/extrato_capes_column"
-        app:layout_constraintHorizontal_bias="0.100"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/include2" />
-
-    <TextView
-        android:id="@+id/extrato_capes_column"
-        android:layout_width="55dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
-        android:fontFamily="@font/inter"
-        android:text="@string/extrato_capes"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.982"
-        app:layout_constraintStart_toStartOf="@+id/include2"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

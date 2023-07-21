@@ -8,70 +8,10 @@
     android:background="@color/app_background"
     tools:context=".MainActivity">
 
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="130dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginStart="30dp"
-        android:background="@drawable/background_spinner"
-        android:drawableLeft="@drawable/ic_baseline_tune_24"
-        android:entries="@array/categories"
-        android:fontFamily="@font/inter"
-        android:text="@string/button_filter_section_content"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textColor="@color/black"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/search_view"
-        app:strokeWidth="1dp" />
-
-    <Button
-        android:id="@+id/button_sort_periodicos"
-        android:layout_width="130dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="30dp"
-        android:backgroundTint="@color/white"
-        android:drawableLeft="@drawable/ic_baseline_swap_vert_24"
-        android:fontFamily="@font/inter"
-        android:text="@string/button_sort_section_content"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textColor="@color/black"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/search_view"
-        app:strokeWidth="1dp" />
-
-    <androidx.appcompat.widget.SearchView
-        android:id="@+id/search_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:background="@drawable/background_searchview"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:searchHintIcon="@drawable/ic_baseline_search_24"
-        app:searchIcon="@drawable/ic_baseline_search_24" />
-
-    <ImageView
-        android:id="@+id/image_filter_periodicos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/spinner"
-        app:layout_constraintEnd_toEndOf="@+id/spinner"
-        app:layout_constraintHorizontal_bias="0.075"
-        app:layout_constraintStart_toStartOf="@+id/spinner"
-        app:layout_constraintTop_toTopOf="@+id/spinner"
-        app:srcCompat="@drawable/ic_baseline_tune_24" />
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/sections_recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
