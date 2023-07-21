@@ -1,29 +1,10 @@
 package com.example.qualis;
 
-import static com.example.qualis.R.id.button_conferencias_section;
-import static com.example.qualis.R.id.button_correlacao_section;
-import static com.example.qualis.R.id.button_periodicos_section;
-
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDelegate;
-import androidx.appcompat.widget.Toolbar;
-import androidx.lifecycle.ViewModel;
-import androidx.lifecycle.ViewModelProvider;
 import androidx.viewpager.widget.ViewPager;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Button;
 
-import com.example.qualis.conferencia.ConferenciaSection;
-
-import com.example.qualis.conferencia.ConferenciaViewModel;
-import com.example.qualis.correlacao.CorrelacaoViewModel;
-
-import com.example.qualis.correlacao.CorrelacaoSection;
-
-import com.example.qualis.periodicos.PeriodicoSection;
-import com.example.qualis.periodicos.PeriodicoViewModel;
 import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity{
@@ -33,9 +14,7 @@ public class MainActivity extends AppCompatActivity{
         setContentView(R.layout.activity_main);
 
         TabLayout tabLayout = findViewById(R.id.tabLayout);
-        // Set the tabs to fill the entire layout.
-        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
-        // Use PagerAdapter to manage page views in fragments.
+        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL); // Set the tabs to fill the entire layout.
 
         // Use PagerAdapter to manage page views in fragments.
         // Each page is represented by its own fragment.
@@ -43,7 +22,6 @@ public class MainActivity extends AppCompatActivity{
         final PagerAdapter adapter = new PagerAdapter
                 (getSupportFragmentManager(), tabLayout.getTabCount());
         viewPager.setAdapter(adapter);
-        // Setting a listener for clicks.
 
         // Setting a listener for clicks.
         viewPager.addOnPageChangeListener(new
