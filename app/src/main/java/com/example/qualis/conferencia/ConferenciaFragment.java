@@ -51,61 +51,61 @@ public class ConferenciaFragment extends Fragment {
             adapter.setConferencias(words);
         });
 
-        Spinner spinner = v.findViewById(R.id.spinner);
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String selectedCategory = (String) parent.getItemAtPosition(position);
-
-                if (selectedCategory.equals("Todos")) {
-                    List<Conferencia> allConferencias = ConferenciaViewModel.getAllConferencias().getValue();
-
-                    adapter.setConferencias(allConferencias);
-                } else {
-                    List<Conferencia> filteredConferencias = ConferenciaViewModel.filterConferenciaByCategory(selectedCategory);
-
-                    adapter.setConferencias(filteredConferencias);
-                }
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-                // Do nothing
-            }
-        });
-
-
-
-        SearchView searchView = v.findViewById(R.id.search_view);
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                // Handle the search query here
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                // Filter the list of Conferencia objects based on the search query
-                // Get the selected category and search query from the spinner and search view, respectively
-                String selectedCategory = (String) spinner.getSelectedItem();
-                String searchQuery = searchView.getQuery().toString();
-
-                // Filter the list of Conferencias by the selected category and search query
-                List<Conferencia> filteredConferencias = ConferenciaViewModel.searchAndFilterConferencia(searchQuery, selectedCategory);
-
-                // Update the list in the RecyclerView adapter with the filtered list
-                adapter.setConferencias(filteredConferencias);
-
-                // Check if the LiveData object is not null before accessing its data
-                // Use the post method of the RecyclerView object to update the adapter on the main thread
-                // after the background thread has finished filtering the list of Conferencias
-                recyclerView.post(() -> adapter.setConferencias(filteredConferencias));
+//        Spinner spinner = v.findViewById(R.id.spinner);
+//        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//            @Override
+//            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+//                String selectedCategory = (String) parent.getItemAtPosition(position);
+//
+//                if (selectedCategory.equals("Todos")) {
+//                    List<Conferencia> allConferencias = ConferenciaViewModel.getAllConferencias().getValue();
+//
+//                    adapter.setConferencias(allConferencias);
+//                } else {
+//                    List<Conferencia> filteredConferencias = ConferenciaViewModel.filterConferenciaByCategory(selectedCategory);
+//
+//                    adapter.setConferencias(filteredConferencias);
+//                }
+//            }
+//
+//            @Override
+//            public void onNothingSelected(AdapterView<?> parent) {
+//                // Do nothing
+//            }
+//        });
 
 
-                return false;
-            }
-        });
+
+//        SearchView searchView = v.findViewById(R.id.search_view);
+//        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+//            @Override
+//            public boolean onQueryTextSubmit(String query) {
+//                // Handle the search query here
+//                return false;
+//            }
+//
+//            @Override
+//            public boolean onQueryTextChange(String newText) {
+//                // Filter the list of Conferencia objects based on the search query
+//                // Get the selected category and search query from the spinner and search view, respectively
+//                String selectedCategory = (String) spinner.getSelectedItem();
+//                String searchQuery = searchView.getQuery().toString();
+//
+//                // Filter the list of Conferencias by the selected category and search query
+//                List<Conferencia> filteredConferencias = ConferenciaViewModel.searchAndFilterConferencia(searchQuery, selectedCategory);
+//
+//                // Update the list in the RecyclerView adapter with the filtered list
+//                adapter.setConferencias(filteredConferencias);
+//
+//                // Check if the LiveData object is not null before accessing its data
+//                // Use the post method of the RecyclerView object to update the adapter on the main thread
+//                // after the background thread has finished filtering the list of Conferencias
+//                recyclerView.post(() -> adapter.setConferencias(filteredConferencias));
+//
+//
+//                return false;
+//            }
+//        });
 
         return v;
     }

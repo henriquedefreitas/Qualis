@@ -45,28 +45,28 @@ public class CorrelacaoFragment extends Fragment {
             adapter.setCorrelacoes(words);
         });
 
-        Spinner spinner = v.findViewById(R.id.spinner);
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String selectedCategory = (String) parent.getItemAtPosition(position);
-
-                if (selectedCategory.equals("Todos")) {
-                    List<Correlacao> allCorrelacoes = CorrelacaoViewModel.getAllCorrelacoes().getValue();
-
-                    adapter.setCorrelacoes(allCorrelacoes);
-                } else {
-                    List<Correlacao> filteredCorrelacoes = CorrelacaoViewModel.filterCorrelacaoByCategory(selectedCategory);
-
-                    adapter.setCorrelacoes(filteredCorrelacoes);
-                }
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-                // Do nothing
-            }
-        });
+//        Spinner spinner = v.findViewById(R.id.spinner);
+//        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//            @Override
+//            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+//                String selectedCategory = (String) parent.getItemAtPosition(position);
+//
+//                if (selectedCategory.equals("Todos")) {
+//                    List<Correlacao> allCorrelacoes = CorrelacaoViewModel.getAllCorrelacoes().getValue();
+//
+//                    adapter.setCorrelacoes(allCorrelacoes);
+//                } else {
+//                    List<Correlacao> filteredCorrelacoes = CorrelacaoViewModel.filterCorrelacaoByCategory(selectedCategory);
+//
+//                    adapter.setCorrelacoes(filteredCorrelacoes);
+//                }
+//            }
+//
+//            @Override
+//            public void onNothingSelected(AdapterView<?> parent) {
+//                // Do nothing
+//            }
+//        });
 
 
 

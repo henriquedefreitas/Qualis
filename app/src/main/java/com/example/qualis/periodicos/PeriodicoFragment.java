@@ -48,28 +48,28 @@ public class PeriodicoFragment extends Fragment {
             adapter.setPeriodicos(words);
         });
 
-        Spinner spinner = v.findViewById(R.id.spinner);
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String selectedCategory = (String) parent.getItemAtPosition(position);
-
-                if (selectedCategory.equals("Todos")) {
-                    List<Periodico> allPeriodicos = periodicoViewModel.getAllPeriodicos().getValue();
-
-                    adapter.setPeriodicos(allPeriodicos);
-                } else {
-                    List<Periodico> filteredPeriodicos = periodicoViewModel.filterPeriodicosByCategory(selectedCategory);
-
-                    adapter.setPeriodicos(filteredPeriodicos);
-                }
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-                // Do nothing
-            }
-        });
+//        Spinner spinner = v.findViewById(R.id.spinner);
+//        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//            @Override
+//            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+//                String selectedCategory = (String) parent.getItemAtPosition(position);
+//
+//                if (selectedCategory.equals("Todos")) {
+//                    List<Periodico> allPeriodicos = periodicoViewModel.getAllPeriodicos().getValue();
+//
+//                    adapter.setPeriodicos(allPeriodicos);
+//                } else {
+//                    List<Periodico> filteredPeriodicos = periodicoViewModel.filterPeriodicosByCategory(selectedCategory);
+//
+//                    adapter.setPeriodicos(filteredPeriodicos);
+//                }
+//            }
+//
+//            @Override
+//            public void onNothingSelected(AdapterView<?> parent) {
+//                // Do nothing
+//            }
+//        });
 
 
 
