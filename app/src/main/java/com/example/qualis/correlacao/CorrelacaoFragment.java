@@ -70,36 +70,36 @@ public class CorrelacaoFragment extends Fragment {
 
 
 
-        SearchView searchView = v.findViewById(R.id.search_view);
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                // Handle the search query here
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                // Filter the list of Correlacao objects based on the search query
-                // Get the selected category and search query from the spinner and search view, respectively
-                String selectedCategory = (String) spinner.getSelectedItem();
-                String searchQuery = searchView.getQuery().toString();
-
-                // Filter the list of Correlacoes by the selected category and search query
-                List<Correlacao> filteredCorrelacoes = CorrelacaoViewModel.searchAndFilterCorrelacao(searchQuery, selectedCategory);
-
-                // Update the list in the RecyclerView adapter with the filtered list
-                adapter.setCorrelacoes(filteredCorrelacoes);
-
-                // Check if the LiveData object is not null before accessing its data
-                // Use the post method of the RecyclerView object to update the adapter on the main thread
-                // after the background thread has finished filtering the list of Correlacoes
-                recyclerView.post(() -> adapter.setCorrelacoes(filteredCorrelacoes));
-
-
-                return false;
-            }
-        });
+//        SearchView searchView = v.findViewById(R.id.search_view);
+//        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+//            @Override
+//            public boolean onQueryTextSubmit(String query) {
+//                // Handle the search query here
+//                return false;
+//            }
+//
+//            @Override
+//            public boolean onQueryTextChange(String newText) {
+//                // Filter the list of Correlacao objects based on the search query
+//                // Get the selected category and search query from the spinner and search view, respectively
+//                String selectedCategory = (String) spinner.getSelectedItem();
+//                String searchQuery = searchView.getQuery().toString();
+//
+//                // Filter the list of Correlacoes by the selected category and search query
+//                List<Correlacao> filteredCorrelacoes = CorrelacaoViewModel.searchAndFilterCorrelacao(searchQuery, selectedCategory);
+//
+//                // Update the list in the RecyclerView adapter with the filtered list
+//                adapter.setCorrelacoes(filteredCorrelacoes);
+//
+//                // Check if the LiveData object is not null before accessing its data
+//                // Use the post method of the RecyclerView object to update the adapter on the main thread
+//                // after the background thread has finished filtering the list of Correlacoes
+//                recyclerView.post(() -> adapter.setCorrelacoes(filteredCorrelacoes));
+//
+//
+//                return false;
+//            }
+//        });
 
         return v;
     }
