@@ -8,7 +8,7 @@
 
     <include
         android:id="@+id/include2"
-        layout="@layout/sections_base" />
+        layout="@layout/fragments_base" />
 
     <TextView
         android:id="@+id/periodico_column_content"
