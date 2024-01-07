@@ -30,5 +30,8 @@
     <string name="periodicos_tab">Periódicos</string>
     <string name="conferencias_tab">Conferências</string>
     <string name="correlacao_tab">Correlação com +1 Área</string>
+    <string name="search">Pesquisar</string>
+    <string name="filter">Filtrar</string>
+    <string name="settings">Configurações</string>
 
 </resources>
